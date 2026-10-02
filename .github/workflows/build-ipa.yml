@@ -1,0 +1,41 @@
+name: Build iOS IPA (unsigned for sideload)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer || sudo xcode-select -p
+
+      - name: Archive (no signing)
+        run: |
+          xcodebuild \
+            -project PotrikaWebView.xcodeproj \
+            -scheme PotrikaWebView \
+            -sdk iphoneos \
+            -configuration Release \
+            -archivePath $RUNNER_TEMP/PotrikaWebView.xcarchive \
+            archive \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGN_IDENTITY=""
+
+      - name: Package to IPA
+        run: |
+          APP_PATH=$(find $RUNNER_TEMP/PotrikaWebView.xcarchive/Products/Applications -maxdepth 1 -name "*.app" | head -n 1)
+          echo "App: $APP_PATH"
+          mkdir -p Payload
+          cp -R "$APP_PATH" Payload/
+          zip -r PotrikaWebView-unsigned.ipa Payload
+          ls -lh *.ipa
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: PotrikaWebView-ipa
+          path: PotrikaWebView-unsigned.ipa

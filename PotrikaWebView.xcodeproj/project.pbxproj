@@ -1,0 +1,34 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+		BBB000000000000000000001 = { isa = PBXProject; buildConfigurationList = BBB00000000000000000C01; compatibilityVersion = "Xcode 15.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en); mainGroup = BBB000000000000000000002; productRefGroup = BBB000000000000000000003; projectDirPath = ""; projectRoot = ""; targets = ( BBB000000000000000000010 ); };
+		BBB000000000000000000002 = { isa = PBXGroup; children = ( BBB000000000000000000011, BBB000000000000000000003, BBB000000000000000000004 ); sourceTree = "<group>"; };
+		BBB000000000000000000003 = { isa = PBXGroup; children = ( BBB00000000000000000P001 ); name = Products; sourceTree = "<group>"; };
+		BBB000000000000000000004 = { isa = PBXGroup; children = ( ); name = Frameworks; sourceTree = "<group>"; };
+		BBB000000000000000000010 = { isa = PBXNativeTarget; buildConfigurationList = BBB00000000000000000C02; buildPhases = ( BBB00000000000000000S01, BBB00000000000000000F01, BBB00000000000000000R01 ); buildRules = ( ); dependencies = ( ); name = PotrikaWebView; packageProductDependencies = ( ); productName = PotrikaWebView; productReference = BBB00000000000000000P001; productType = "com.apple.product-type.application"; };
+		BBB00000000000000000P001 = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PotrikaWebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBB000000000000000000011 = { isa = PBXGroup; children = ( BBB0000000000000000F001, BBB0000000000000000F002, BBB0000000000000000F003, BBB0000000000000000F004 ); path = PotrikaWebView; sourceTree = "<group>"; };
+		BBB00000000000000000S01 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = ( BBB0000000000000000B001, BBB0000000000000000B002, BBB0000000000000000B003, BBB0000000000000000B004 ); runOnlyForDeploymentPostprocessing = 0; };
+		BBB00000000000000000F01 = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = ( ); runOnlyForDeploymentPostprocessing = 0; };
+		BBB00000000000000000R01 = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = ( ); runOnlyForDeploymentPostprocessing = 0; };
+		BBB0000000000000000F001 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App/PotrikaWebViewApp.swift"; sourceTree = "<group>"; };
+		BBB0000000000000000F002 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/MainWebView.swift"; sourceTree = "<group>"; };
+		BBB0000000000000000F003 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Views/WebViewContainer.swift"; sourceTree = "<group>"; };
+		BBB0000000000000000F004 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utilities/WebConstants.swift"; sourceTree = "<group>"; };
+		BBB0000000000000000B001 = { isa = PBXBuildFile; fileRef = BBB0000000000000000F001; };
+		BBB0000000000000000B002 = { isa = PBXBuildFile; fileRef = BBB0000000000000000F002; };
+		BBB0000000000000000B003 = { isa = PBXBuildFile; fileRef = BBB0000000000000000F003; };
+		BBB0000000000000000B004 = { isa = PBXBuildFile; fileRef = BBB0000000000000000F004; };
+		BBB00000000000000000C01 = { isa = XCConfigurationList; buildConfigurations = ( BBB0000000000000000D001, BBB0000000000000000D002 ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		BBB00000000000000000C02 = { isa = XCConfigurationList; buildConfigurations = ( BBB0000000000000000D003, BBB0000000000000000D004 ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		BBB0000000000000000D001 = { isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; IPHONEOS_DEPLOYMENT_TARGET = 17.0; PRODUCT_BUNDLE_IDENTIFIER = "com.potrikaprotidin.web"; PRODUCT_NAME = PotrikaWebView; SWIFT_VERSION = 5.0; }; name = Debug; };
+		BBB0000000000000000D002 = { isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; IPHONEOS_DEPLOYMENT_TARGET = 17.0; PRODUCT_BUNDLE_IDENTIFIER = "com.potrikaprotidin.web"; PRODUCT_NAME = PotrikaWebView; SWIFT_VERSION = 5.0; }; name = Release; };
+		BBB0000000000000000D003 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; INFOPLIST_FILE = "PotrikaWebView/App/Info.plist"; IPHONEOS_DEPLOYMENT_TARGET = 17.0; LD_RUNPATH_SEARCH_PATHS = ( "$(inherited)", "@executable_path/Frameworks" ); PRODUCT_BUNDLE_IDENTIFIER = "com.potrikaprotidin.web"; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Debug; };
+		BBB0000000000000000D004 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; INFOPLIST_FILE = "PotrikaWebView/App/Info.plist"; IPHONEOS_DEPLOYMENT_TARGET = 17.0; LD_RUNPATH_SEARCH_PATHS = ( "$(inherited)", "@executable_path/Frameworks" ); PRODUCT_BUNDLE_IDENTIFIER = "com.potrikaprotidin.web"; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Release; };
+	};
+	rootObject = BBB000000000000000000001;
+}
